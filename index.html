@@ -1,0 +1,457 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>Juros compostos, inflação e aportes crescentes — Seu futuro, mês a mês</title>
+<style>
+:root{--ink:#173247;--muted:#61717d;--paper:#f3f6f6;--card:#fff;--line:#dce5e6;--accent:#087d65;--soft:#e9f5ef;--blue:#476be2;--warn:#f8efdc;--red:#ad3636;--shadow:0 10px 32px #17324708}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:15px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif}button,input,select{font:inherit}button,a,input,select,summary{touch-action:manipulation}button{cursor:pointer}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:4px}a{color:var(--accent)}.wrap{max-width:1280px;margin:auto;padding:30px 32px 40px}.topline{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:34px}.brand{font-weight:800;font-size:16px;display:flex;align-items:center;gap:10px}.brand-icon{display:inline-flex;width:34px;height:34px;align-items:center;justify-content:center;background:var(--ink);border-radius:10px;color:white;font-size:20px}.badge{border:1px solid var(--line);padding:6px 12px;border-radius:20px;font-size:12px;color:var(--muted);background:var(--card)}.eyebrow{font-size:11px;letter-spacing:1.8px;font-weight:800;text-transform:uppercase;color:var(--accent);margin:0 0 10px}h1{font-size:clamp(30px,3.6vw,47px);line-height:1.12;letter-spacing:-1.8px;font-weight:750;max-width:700px;margin:0 0 13px}h1 span{color:var(--accent)}.lead{font-size:16px;color:var(--muted);max-width:730px;margin:0}.hero{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin-bottom:28px}.hero-note{flex-shrink:0;font-size:12px;line-height:1.65;max-width:155px;border-left:2px solid var(--line);padding-left:15px;color:var(--muted)}.main-grid{display:grid;grid-template-columns:320px minmax(0,1fr);gap:23px;align-items:start}.card{background:var(--card);border:1px solid var(--line);border-radius:19px;box-shadow:var(--shadow);padding:25px}.controls{position:sticky;top:18px}.section-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:20px}h2{font-size:18px;line-height:1.3;letter-spacing:-.4px;margin:0}h3{margin:0 0 8px;font-size:17px;letter-spacing:-.3px}.step{font-size:10px;letter-spacing:1px;color:var(--muted);font-weight:700}.reset{border:0;background:transparent;color:var(--muted);font-size:12px;text-decoration:underline;text-underline-offset:3px;padding:0}.field{margin-bottom:17px}.field label{display:block;margin-bottom:7px;font-size:12px;font-weight:650}.input-box{display:flex;align-items:center;border:1px solid #cfdcde;border-radius:10px;background:#fcfdfd;transition:border-color .15s;min-width:0}.input-box:focus-within{border-color:var(--accent);box-shadow:0 0 0 3px #087d6512}.prefix,.suffix{padding:0 11px;color:var(--muted);font-size:12px;white-space:nowrap}.input-box input{width:100%;min-width:0;border:0;background:transparent;padding:11px 12px;outline:0;font-weight:600;color:var(--ink);font-size:15px}.prefix+input{padding-left:0}.suffix{padding-left:0}.input-box select{border:0;outline:0;background:transparent;padding:11px 6px 11px 0;max-width:106px;color:var(--ink);font-size:12px}.full-select{width:100%;border:1px solid #cfdcde;border-radius:10px;background:#fcfdfd;padding:11px 12px;color:var(--ink);font-size:13px}.full-select:focus{outline:2px solid var(--accent);outline-offset:1px}.hint{font-size:11px;color:var(--muted);margin-top:6px;line-height:1.45}.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.chip{border:1px solid var(--line);background:white;border-radius:6px;color:var(--muted);padding:4px 9px;font-size:11px}.chip:hover{background:var(--soft);color:var(--accent);border-color:#a2cbbd}.advanced{border-top:1px solid var(--line);padding-top:15px;margin-top:20px}.advanced summary{font-size:12px;font-weight:650;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center}.advanced summary:after{content:'+';font-size:20px;color:var(--muted)}.advanced[open] summary:after{content:'−'}.advanced-body{padding-top:17px}.assumption{font-size:11px;color:var(--muted);line-height:1.5;margin:17px 0 0}.error{background:#fff0f0;border:1px solid #f1bebe;border-radius:10px;color:var(--red);padding:10px;font-size:12px;margin-top:12px}.result-col{display:flex;flex-direction:column;gap:20px;min-width:0}.result-top{background:var(--ink);color:white;border:0;position:relative;overflow:hidden}.result-top .eyebrow{color:#b8dccf;font-size:10px;margin-bottom:11px}.result-context{color:#bdceda;font-size:12px;margin:0 0 6px}.big-value{font-size:clamp(32px,4vw,50px);font-weight:750;line-height:1.15;letter-spacing:-1.7px;margin:0;overflow-wrap:anywhere}.split{display:grid;grid-template-columns:1fr 1fr;gap:16px;border-top:1px solid #ffffff29;margin-top:22px;padding-top:19px}.metric-label{font-size:11px;color:#bdceda;margin-bottom:4px}.metric-value{font-size:21px;font-weight:650;letter-spacing:-.5px;overflow-wrap:anywhere}.composition{display:flex;height:5px;border-radius:9px;overflow:hidden;margin-top:20px;background:#486474}.composition .principal{background:#a3c1d7}.composition .earned{background:#73d6ac}.composition-note{font-size:11px;color:#bdceda;margin:7px 0 0}.real-banner{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:17px 22px}.real-text{font-size:12px;color:var(--muted)}.real-text b{display:block;font-size:13px;color:var(--ink)}.real-value{font-size:23px;font-weight:700;letter-spacing:-.6px;text-align:right;white-space:nowrap}.chart-head{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-bottom:8px}.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:12px 0 0}.legend i{width:17px;display:inline-block;border-top:3px solid var(--accent);margin:0 6px 3px 0}.legend .invested{border-top-color:var(--blue);border-top-style:dashed}.chart-holder{width:100%;overflow:hidden;margin-top:5px}.chart-holder svg{display:block;width:100%;height:auto;min-height:185px}.chart-caption{font-size:11px;color:var(--muted);margin:6px 0 0}.insight-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.insight-card{padding:23px;min-width:0}.insight-card .eyebrow{font-size:10px;letter-spacing:1.2px}.insight-title{font-size:18px;line-height:1.35;margin-bottom:12px}.subtext{font-size:12px;color:var(--muted);line-height:1.55}.small-compare{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:12px}.small-compare strong{font-size:14px;white-space:nowrap}.insight-emphasis{margin:16px 0 5px;font-size:25px;font-weight:750;letter-spacing:-.6px;overflow-wrap:anywhere}.emphasis-green{color:var(--accent)}.notice{background:var(--soft);padding:11px 13px;border-radius:9px;margin-top:14px;font-size:12px;line-height:1.5}.goal-meta{font-size:12px;color:var(--muted);margin-top:5px}.progress-track{height:6px;border-radius:10px;background:#edf1f2;overflow:hidden;margin:14px 0 5px}.progress-fill{height:100%;background:var(--accent);width:0;max-width:100%}.table-card{padding:0;overflow:hidden}.table-header{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:23px 25px 17px}.ghost-button{border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-size:11px;background:white;color:var(--ink);white-space:nowrap}.ghost-button:hover{background:var(--paper)}.table-scroll{overflow:auto;max-height:390px}table{border-collapse:collapse;width:100%;font-size:12px;white-space:nowrap}th{text-align:right;font-size:10px;text-transform:uppercase;letter-spacing:.55px;color:var(--muted);background:#f7f9f9;font-weight:650;padding:13px 18px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);position:sticky;top:0}td{padding:12px 18px;text-align:right;border-bottom:1px solid #edf1f2}th:first-child,td:first-child{text-align:left}tbody tr:last-child{font-weight:750;background:var(--soft)}.table-footer{padding:13px 25px;font-size:11px;color:var(--muted)}.method{margin-top:25px;padding-top:19px;border-top:1px solid var(--line);color:var(--muted);font-size:12px}.method summary{cursor:pointer;font-weight:600;color:var(--ink);padding:5px 0}.method p{max-width:1020px;line-height:1.7}.formula{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:11px;background:white;padding:12px;border:1px solid var(--line);border-radius:8px;overflow-x:auto}.footer{display:flex;gap:12px;justify-content:space-between;margin-top:24px;font-size:10px;color:var(--muted)}[hidden]{display:none!important}.muted{color:var(--muted)}
+@media(min-width:1100px){.result-top{padding:29px 30px}.chart-card{padding:25px 28px}}
+@media(max-width:1000px){.wrap{padding:25px 20px}.main-grid{grid-template-columns:285px minmax(0,1fr);gap:18px}.card{padding:20px}.insight-grid{grid-template-columns:1fr;gap:18px}.hero-note{display:none}.big-value{font-size:38px}.metric-value{font-size:18px}.real-value{font-size:19px}.real-banner{gap:10px}}
+@media(max-width:720px){.wrap{padding:20px 15px 30px}.topline{margin-bottom:26px}.badge{font-size:10px;padding:5px 9px}.brand{font-size:14px}.hero{margin-bottom:22px}h1{font-size:35px;letter-spacing:-1.4px}.lead{font-size:14px}.main-grid{grid-template-columns:1fr}.controls{position:static}.control-main{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.field{margin-bottom:15px}.advanced{margin-top:8px}.advanced-body{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}.assumption{margin-top:13px}.big-value{font-size:39px}.metric-value{font-size:20px}.insight-grid{grid-template-columns:1fr 1fr;gap:14px}.insight-card{padding:18px}.small-compare{flex-direction:column;gap:2px}.insight-title{font-size:17px}.insight-emphasis{font-size:22px}.table-header{padding:20px}.real-banner{padding:17px 20px}.footer{flex-direction:column;gap:5px}.chart-head h2{font-size:17px}}
+@media(max-width:460px){.control-main,.advanced-body,.insight-grid{grid-template-columns:1fr}.controls{padding:22px}.real-banner{align-items:flex-start;flex-direction:column;gap:7px}.real-value{text-align:left;font-size:24px}.metric-value{font-size:18px}.topline .badge{max-width:114px;text-align:center}.chart-holder svg{min-height:0}.table-header h2{font-size:16px}.insight-emphasis{font-size:26px}.small-compare{flex-direction:row;align-items:center}.hero{display:block}.big-value{font-size:34px}}
+@media print{body{background:white}.wrap{max-width:none;padding:0}.controls{position:static}.main-grid{grid-template-columns:270px 1fr}.card{box-shadow:none;break-inside:avoid}.reset,.chips,.ghost-button{display:none}.table-scroll{max-height:none;overflow:visible}.table-card{break-inside:auto}.method{font-size:9px}.badge{display:none}}
+
+/* Inflation extension: retains the original layout and offline operation. */
+.inflation-input{background:#fff9ef;border:1px solid #ebdcc2;border-radius:12px;padding:15px;margin:2px 0 0;grid-column:1/-1}.inflation-input .input-box{background:white}.inflation-input .chip{background:#fffdf8}.inflation-input .chip[aria-pressed="true"]{border-color:#9b5c17;color:#81480f;background:#fcebd1}.goal-mode-label{margin-top:12px}.inflation-card{border-color:#e5d9c6}.inflation-heading{display:flex;gap:14px;align-items:center;justify-content:space-between;margin-bottom:24px}.inflation-heading .eyebrow{font-size:9px;color:#9b5c17;letter-spacing:1.1px;margin-bottom:6px}.inflation-heading h2{font-size:22px}.inflation-badge{border:1px solid #ebdcc2;background:#fff9ef;border-radius:20px;padding:5px 10px;font-size:11px;color:#81480f;white-space:nowrap}.inflation-values{display:grid;grid-template-columns:1.04fr 1fr;gap:18px}.inflation-values .subtext{margin:5px 0 0;font-size:11px}.value-label{font-size:12px;color:var(--muted);margin:0 0 7px}.purchasing-value{font-size:clamp(26px,2.7vw,35px);font-weight:750;letter-spacing:-1.1px;line-height:1.2;margin:0;overflow-wrap:anywhere}.erosion-value{padding-left:20px;border-left:1px solid var(--line)}.erosion-number{font-size:clamp(24px,2.4vw,31px);font-weight:720;letter-spacing:-.8px;line-height:1.3;margin:0;color:#9b5c17;overflow-wrap:anywhere}.purchasing-meter{display:flex;height:9px;overflow:hidden;border-radius:20px;margin-top:22px;background:#f7e4c7}.purchasing-meter span{display:block;transition:width .18s}#power-retained{background:var(--ink)}#power-eroded{background:#d29853}.meter-caption{font-size:11px;color:var(--muted);margin:8px 0 19px}.inflation-stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.inflation-stat-grid>div{background:#f7f9f9;border-radius:10px;padding:13px 15px;min-width:0}.inflation-stat-grid span{font-size:11px;color:var(--muted);display:block}.inflation-stat-grid strong{display:block;font-size:22px;letter-spacing:-.5px;margin:3px 0;overflow-wrap:anywhere}.inflation-stat-grid small{display:block;font-size:10px;color:var(--muted)}.inflation-example{font-size:12px;margin:15px 0 7px}.return-verdict{font-size:11px;color:var(--accent);margin:0 0 17px}.return-verdict.negative{color:var(--red)}.inflation-disclaimer{font-size:11px;color:var(--muted);border-top:1px solid var(--line);padding-top:13px;margin:0;line-height:1.55}.chart-switch{display:inline-flex;max-width:100%;padding:4px;border:1px solid var(--line);background:var(--paper);border-radius:10px;margin:9px 0 5px;gap:4px}.chart-switch button{font-size:11px;border:0;border-radius:7px;background:transparent;color:var(--muted);padding:8px 12px;font-weight:600;line-height:1.4}.chart-switch button[aria-pressed="true"]{background:white;color:var(--ink);box-shadow:0 1px 4px #17324714}.legend .real{border-top-color:#b57930;border-top-style:dashed}.chart-head{flex-wrap:wrap}.controls{max-height:calc(100vh - 36px);overflow-y:auto;scrollbar-width:thin}#real-rate.negative{color:var(--red)}.chart-caption{line-height:1.6}
+@media(max-width:1100px){.inflation-values{grid-template-columns:1fr;gap:16px}.erosion-value{padding:15px 0 0;border-left:0;border-top:1px solid var(--line)}.inflation-heading{align-items:flex-start;flex-wrap:wrap;gap:10px}.inflation-stat-grid{grid-template-columns:1fr}.inflation-heading h2{font-size:20px}}
+@media(max-width:720px){.controls{max-height:none;overflow:visible}.inflation-values{grid-template-columns:1fr 1fr;gap:18px}.erosion-value{border-top:0;border-left:1px solid var(--line);padding:0 0 0 18px}.inflation-stat-grid{grid-template-columns:1fr 1fr}.inflation-heading{align-items:center}.inflation-card{padding:22px}}
+@media(max-width:460px){.inflation-values,.inflation-stat-grid{grid-template-columns:1fr}.erosion-value{border-top:1px solid var(--line);border-left:0;padding:14px 0 0}.purchasing-value{font-size:32px}.erosion-number{font-size:28px}.inflation-heading{align-items:flex-start;margin-bottom:20px}.chart-switch{width:100%}.chart-switch button{flex:1;padding:8px;font-size:10px}.inflation-badge{font-size:10px}.inflation-heading h2{font-size:21px}}
+@media print{.controls{max-height:none;overflow:visible}.chart-switch{display:none}.inflation-card{break-inside:avoid}}
+
+/* Annual contribution growth: all inputs and calculations remain offline. */
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.growth-input{grid-column:1/-1;background:var(--soft);border:1px solid #c4dfd3;border-radius:12px;padding:15px;margin:0 0 18px}.growth-input .full-select,.growth-input .input-box{background:white}.growth-input .full-select{font-size:12px;padding:10px 8px}.growth-value-field{margin-top:10px}.growth-input .chip[aria-pressed="true"]{background:#d3ebdf;color:#075b4b;border-color:#80b5a2}.growth-preview{font-size:11px;color:#176451;border-top:1px solid #c4dfd3;margin:10px 0 0;padding-top:9px;line-height:1.55}.growth-card{border-color:#c4dfd3}.growth-heading{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:19px;flex-wrap:wrap}.growth-heading .eyebrow{font-size:9px;letter-spacing:1px;margin-bottom:6px}.growth-heading h2{font-size:22px}.growth-badge{font-size:11px;border:1px solid #c4dfd3;background:var(--soft);color:#176451;border-radius:20px;padding:5px 10px;white-space:nowrap}.growth-milestones{display:grid;grid-template-columns:repeat(var(--milestone-count,4),minmax(0,1fr));gap:9px}.milestone{min-width:0;background:#f4f8f6;border-radius:10px;padding:13px 11px;border:1px solid #e1ece6}.milestone:last-child{background:#e7f3ed;border-color:#b7d7c7}.milestone span,.milestone small{display:block;color:var(--muted);font-size:10px}.milestone span{font-weight:650}.milestone strong{display:block;font-size:17px;line-height:1.35;letter-spacing:-.5px;margin:5px 0;overflow-wrap:anywhere}.growth-comparison{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:19px;padding-top:17px;border-top:1px solid var(--line)}.growth-comparison span{display:block;font-size:11px;color:var(--muted);margin-bottom:4px}.growth-comparison strong{display:block;font-size:20px;letter-spacing:-.5px;overflow-wrap:anywhere}.growth-comparison>div:last-child strong{color:var(--accent)}.growth-gain{font-size:16px;font-weight:700;color:var(--accent);margin:17px 0 4px;overflow-wrap:anywhere}.growth-card .subtext{margin:0}.growth-footnote{font-size:11px;color:var(--muted);margin:10px 0 0}.chart-switch{display:flex}.chart-switch button{flex:1}.legend .baseline{border-top-color:var(--blue);border-top-style:dashed}.growth-notice{background:var(--soft);border-radius:10px;padding:12px;font-size:12px}.assumption{line-height:1.6}
+@media(max-width:1100px){.growth-milestones{grid-template-columns:repeat(2,minmax(0,1fr))}.growth-comparison strong{font-size:18px}.growth-heading h2{font-size:20px}}
+@media(max-width:720px){.growth-milestones{grid-template-columns:repeat(var(--milestone-count,4),minmax(0,1fr))}.topline .badge{max-width:160px;text-align:center}}
+@media(max-width:500px){.growth-milestones{grid-template-columns:repeat(2,minmax(0,1fr))}.growth-comparison{grid-template-columns:1fr;gap:12px}.growth-heading h2{font-size:20px}.growth-comparison strong{font-size:22px}.chart-switch button{font-size:10px;padding:8px 5px}.milestone strong{font-size:18px}}
+@media print{.growth-card{break-inside:avoid}.growth-input{background:white}.chart-switch{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="topline"><div class="brand"><span class="brand-icon" aria-hidden="true">↗</span> Primeiro passo</div><span class="badge">Juros + inflação + aportes crescentes</span></header>
+<section class="hero"><div><p class="eyebrow">Pequenos começos. Um plano de longo prazo.</p><h1>Seu futuro,<br><span>mês a mês.</span></h1><p class="lead">Faça seu aporte acompanhar sua evolução — e veja o impacto no patrimônio e no poder de compra ao longo do tempo.</p></div><div class="hero-note">Aumente o aporte.<br>Considere a inflação.<br>Compare o resultado.</div></section>
+<main class="main-grid">
+<aside class="card controls" aria-label="Configurar simulação">
+<div class="section-top"><h2>Seu plano</h2><button class="reset" id="reset" type="button">Restaurar exemplo</button></div>
+<form id="form" novalidate>
+<div class="control-main">
+<div class="field"><label for="initial">Quanto você já tem para investir?</label><div class="input-box"><span class="prefix">R$</span><input id="initial" inputmode="decimal" type="text" value="0,00" autocomplete="off" aria-describedby="initial-hint"></div><div class="hint" id="initial-hint">Pode começar do zero.</div></div>
+<div class="field"><label for="monthly">Aporte mensal no primeiro ano</label><div class="input-box"><span class="prefix">R$</span><input id="monthly" inputmode="decimal" type="text" value="1.000,00" autocomplete="off"></div><div class="chips" aria-label="Testar aportes mensais"><button class="chip" type="button" data-monthly="500">R$ 500</button><button class="chip" type="button" data-monthly="1000">R$ 1.000</button><button class="chip" type="button" data-monthly="2000">R$ 2.000</button></div></div>
+<div class="field growth-input" aria-labelledby="growth-control-title">
+  <label id="growth-control-title" for="growthMode">Aumento do aporte a cada ano</label>
+  <select class="full-select" id="growthMode" aria-describedby="growth-rule"><option value="percent">Percentual sobre o aporte anterior</option><option value="fixed">Valor fixo a mais por mês</option></select>
+  <div id="growth-percent-fields" class="growth-value-field"><label class="sr-only" for="growthRate">Percentual de aumento anual do aporte</label><div class="input-box"><input id="growthRate" type="number" inputmode="decimal" min="0" max="100" step="any" value="10" aria-describedby="growth-rule growth-inflation-note"><span class="suffix">% ao ano</span></div><div class="chips" aria-label="Testar reajustes anuais"><button class="chip" type="button" data-growth="0">Sem aumento</button><button class="chip" type="button" data-growth="5">5%</button><button class="chip" type="button" data-growth="10">10%</button></div></div>
+  <div id="growth-fixed-fields" class="growth-value-field" hidden><label class="sr-only" for="growthAmount">Valor acrescentado ao aporte mensal a cada ano</label><div class="input-box"><span class="prefix">+ R$</span><input id="growthAmount" type="text" inputmode="decimal" autocomplete="off" value="100,00" aria-describedby="growth-rule growth-inflation-note"><span class="suffix">por ano</span></div><div class="chips" aria-label="Testar aumentos do aporte mensal"><button class="chip" type="button" data-growth-amount="100">R$ 100</button><button class="chip" type="button" data-growth-amount="200">R$ 200</button><button class="chip" type="button" data-growth-amount="500">R$ 500</button></div></div>
+  <div class="hint" id="growth-rule">O primeiro aumento entra no 13º mês; depois, a cada 12 meses.</div><div class="growth-preview" id="growth-preview"></div><div class="hint" id="growth-inflation-note">Reajuste nominal: a inflação não é somada automaticamente.</div>
+</div>
+<div class="field"><label for="rate">Rendimento estimado</label><div class="input-box"><input id="rate" type="number" inputmode="decimal" step="any" value="8"><span class="suffix">%</span><select id="rateUnit" aria-label="Período da taxa"><option value="annual">ao ano</option><option value="monthly">ao mês</option></select></div><div class="hint" id="rate-equivalent">Taxa efetiva. Hipótese, não previsão.</div></div>
+<div class="field"><label for="years">Por quanto tempo?</label><div class="input-box"><input id="years" type="number" inputmode="numeric" min="1" max="50" step="1" value="20"><span class="suffix">anos</span></div><div class="chips" aria-label="Testar prazos"><button class="chip" type="button" data-years="10">10 anos</button><button class="chip" type="button" data-years="20">20 anos</button><button class="chip" type="button" data-years="30">30 anos</button></div></div>
+<div class="field inflation-input"><label for="inflation">Inflação estimada ao ano</label><div class="input-box"><input id="inflation" type="number" inputmode="decimal" min="0" max="100" step="any" value="4" aria-describedby="inflation-hint"><span class="suffix">% ao ano</span></div><div class="chips" aria-label="Testar hipóteses de inflação"><button class="chip" type="button" data-inflation="0">Sem inflação</button><button class="chip" type="button" data-inflation="4">4%</button><button class="chip" type="button" data-inflation="6">6%</button><button class="chip" type="button" data-inflation="8">8%</button></div><div class="hint" id="inflation-hint">Hipótese editável, não a inflação atual. Use 0% para comparar sem corrosão.</div></div>
+</div>
+<details class="advanced"><summary>Meta e outros ajustes</summary><div class="advanced-body">
+
+<div class="field"><label for="goal">Quanto você quer acumular?</label><div class="input-box"><span class="prefix">R$</span><input id="goal" inputmode="decimal" type="text" value="1.000.000,00" autocomplete="off"></div><label class="goal-mode-label" for="goalMode">Como interpretar sua meta?</label><select class="full-select" id="goalMode"><option value="nominal">Valor na conta no futuro</option><option value="real">Poder de compra de hoje</option></select><div class="hint" id="goal-hint">Meta nominal: valor na data futura.</div></div>
+<div class="field"><label for="timing">Quando você faz o depósito?</label><select class="full-select" id="timing"><option value="end">No fim de cada mês</option><option value="begin">No início de cada mês</option></select></div>
+<div class="field"><label for="delay">Comparar com começar depois</label><div class="input-box"><input id="delay" type="number" inputmode="numeric" min="0" max="20" step="1" value="5"><span class="suffix">anos</span></div><div class="hint">Mantemos a mesma data final.</div></div>
+</div></details>
+<div class="error" id="error" role="alert" hidden></div>
+<p class="assumption">Valores iniciais e reajuste de 10% são exemplos editáveis. Aportes reajustados uma vez por ano; rendimento e inflação constantes. Não desconta impostos nem taxas.</p>
+</form></aside>
+<div class="result-col" id="results">
+<section class="card result-top" aria-label="Resumo do resultado"><p class="eyebrow">Saldo nominal · valor na conta no futuro</p><p class="result-context" id="context">Ao final de 20 anos, você teria</p><p class="big-value" id="balance">R$ 1.284.757,93</p><div class="split"><div><div class="metric-label">Dinheiro que você depositou</div><div class="metric-value" id="invested">R$ 687.299,99</div></div><div><div class="metric-label">Rendimentos acumulados</div><div class="metric-value" id="interest">R$ 597.457,94</div></div></div><div class="composition" aria-hidden="true"><span class="principal" id="principal-bar"></span><span class="earned" id="interest-bar"></span></div><p class="composition-note" id="composition-note"></p></section>
+<section class="card growth-card" aria-labelledby="growth-title">
+  <div class="growth-heading"><div><p class="eyebrow">Seu plano acompanha sua evolução</p><h2 id="growth-title">O efeito de aumentar o aporte</h2></div><span class="growth-badge" id="growth-badge"></span></div>
+  <div class="growth-milestones" id="growth-milestones" aria-label="Aporte mensal em cada ano destacado"></div>
+  <div class="growth-comparison"><div><span>Saldo sem aumentar o aporte</span><strong id="fixed-balance"></strong></div><div><span>Saldo com o reajuste escolhido</span><strong id="growing-balance"></strong></div></div>
+  <p class="growth-gain" id="growth-gain"></p><p class="subtext" id="growth-breakdown"></p><p class="growth-footnote" id="growth-real"></p>
+</section>
+<section class="card inflation-card" aria-labelledby="inflation-title">
+  <div class="inflation-heading"><div><p class="eyebrow">O efeito sobre o que você poderá comprar</p><h2 id="inflation-title">A corrosão da inflação</h2></div><span class="inflation-badge" id="inflation-caption"></span></div>
+  <div class="inflation-values">
+    <div><p class="value-label">Seu saldo em dinheiro de hoje</p><p class="purchasing-value" id="real-balance"></p><p class="subtext">Poder de compra do saldo final.</p></div>
+    <div class="erosion-value"><p class="value-label">Diferença ao corrigir pela inflação</p><p class="erosion-number" id="erosion-amount"></p><p class="subtext" id="erosion-caption"></p></div>
+  </div>
+  <div class="purchasing-meter" aria-hidden="true"><span id="power-retained"></span><span id="power-eroded"></span></div>
+  <p class="meter-caption" id="power-caption"></p>
+  <div class="inflation-stat-grid">
+    <div><span>Inflação acumulada no prazo</span><strong id="cumulative-inflation"></strong><small>Aumento dos preços na hipótese escolhida.</small></div>
+    <div><span>Rendimento real ao ano</span><strong id="real-rate"></strong><small>Taxa após descontar a inflação, antes de custos.</small></div>
+  </div>
+  <p class="inflation-example" id="inflation-example"></p>
+  <p class="return-verdict" id="return-verdict"></p>
+  <p class="inflation-disclaimer"><strong>Não é dinheiro retirado da conta.</strong> A diferença compara o saldo nominal com seu equivalente em reais de hoje. Não representa um prejuízo nominal nem uma taxa cobrada.</p>
+</section>
+<section class="card chart-card" aria-label="Gráfico do crescimento">
+  <div class="chart-head"><h2>O tempo faz diferença</h2><span class="step">EVOLUÇÃO DO PATRIMÔNIO</span></div>
+  <div class="chart-switch" role="group" aria-label="Escolher comparação do gráfico"><button type="button" id="chart-inflation" aria-pressed="true">Saldo × poder de compra</button><button type="button" id="chart-contributions" aria-pressed="false">Aportes × rendimentos</button><button type="button" id="chart-growth" aria-pressed="false">Com × sem aumento</button></div>
+  <div class="legend" id="chart-legend"></div><div class="chart-holder" id="chart"></div><p class="chart-caption" id="chart-caption"></p>
+</section>
+<div class="insight-grid">
+<section class="card insight-card"><p class="eyebrow">O efeito de adiar</p><h3 class="insight-title" id="delay-title">E se você começar daqui a 5 anos?</h3><div class="small-compare"><span>Começando agora</span><strong id="now-balance"></strong></div><div class="small-compare"><span id="later-label">Começando depois</span><strong id="later-balance"></strong></div><div class="insight-emphasis" id="delay-cost"></div><div class="subtext" id="delay-description"></div><div class="notice" id="delay-breakdown"></div><p class="subtext" id="delay-real"></p><p class="subtext">Durante a espera, não há depósitos nem rendimentos. O valor inicial só é aplicado ao começar. Os aumentos seguem o calendário original: quem adia começa com o aporte previsto para aquele ano. A data final é a mesma.</p></section>
+<section class="card insight-card"><p class="eyebrow">Do plano à sua meta</p><h3 class="insight-title" id="goal-title">Sua meta de R$ 1 milhão</h3><div class="subtext" id="goal-timeline"></div><div class="progress-track" aria-hidden="true"><div class="progress-fill" id="goal-progress"></div></div><div class="goal-meta" id="goal-percent"></div><div class="insight-emphasis emphasis-green" id="required-monthly"></div><div class="subtext" id="required-description"></div><div class="notice" id="goal-note"></div><p class="subtext" id="goal-basis-explanation"></p><p class="subtext"><span id="goal-contribution-explanation">O valor necessário corresponde ao aporte mensal do primeiro ano. Nos anos seguintes, aplica-se o reajuste escolhido.</span></p></section>
+</div>
+<section class="card table-card"><div class="table-header"><h2>Seu dinheiro, ano a ano</h2><button class="ghost-button" id="csv" type="button">Exportar mês a mês</button></div><div class="table-scroll"><table><thead><tr><th scope="col">Ano</th><th scope="col">Aporte mensal no ano</th><th scope="col">Total depositado</th><th scope="col">Rendimentos</th><th scope="col">Saldo nominal</th><th scope="col">Reais de hoje</th><th scope="col">Diferença pela inflação</th></tr></thead><tbody id="year-rows"></tbody></table></div><div class="table-footer">O aporte mensal muda a partir do 2º ano e fica constante por 12 meses. Total depositado e rendimentos são nominais e acumulados. A diferença pela inflação não é uma retirada. Deslize a tabela para ver todas as colunas; o CSV detalha cada mês.</div></section>
+</div></main>
+<details class="method"><summary>Como a conta é feita, hipóteses e fontes</summary>
+<p><strong>Juros compostos:</strong> os rendimentos ficam investidos e passam a participar do cálculo dos períodos seguintes. O simulador soma o valor inicial, os depósitos mensais e os rendimentos. Os resultados são calculados sem arredondamento intermediário; apenas a exibição usa centavos.</p>
+<p><strong>Taxa efetiva:</strong> uma taxa anual é convertida em mensal por equivalência, e não dividida por 12. Ao mudar a unidade no seletor, convertemos a taxa para preservar aproximadamente o mesmo rendimento. Por exemplo, 8% efetivos ao ano equivalem a aproximadamente 0,6434% ao mês.</p>
+<div class="formula">i = (1 + taxa_anual)^(1/12) − 1<br>n = anos × 12<br>saldo_final = valor_inicial × (1+i)^n + aporte × [(1+i)^n − 1] / i<br>Se i = 0: saldo_final = valor_inicial + aporte × n</div>
+<p>A expressão acima vale para <strong>aportes mensais constantes</strong> e depósitos <strong>no fim do mês</strong>. Para depósitos no início, multiplicamos apenas a parcela relativa aos aportes por (1+i). O Banco Central apresenta a metodologia com depósitos no início de cada período. O simulador oferece ambas as opções.</p>
+<p><strong>Aporte crescente:</strong> o valor informado é o depósito mensal nos primeiros 12 meses. O primeiro reajuste é aplicado no mês 13, o seguinte no mês 25 e assim por diante. Em percentual, o aumento incide sobre o aporte do ano anterior; em reais, o acréscimo se soma ao valor mensal a cada ano. Não é um depósito extra feito uma vez por ano. O percentual informado é nominal: a inflação não é somada automaticamente. Para manter o mesmo aporte, use 0%.</p>
+<div class="formula">k = piso((mês − 1) / 12)<br>aporte_no_mês = aporte_inicial × (1 + reajuste_anual)^k, no modo percentual<br>aporte_no_mês = aporte_inicial + acréscimo_anual × k, no modo em reais<br>saldo_no_mês = saldo_anterior × (1+i) + aporte_no_mês, para depósito no fim<br>saldo_no_mês = (saldo_anterior + aporte_no_mês) × (1+i), para depósito no início</div>
+<p><strong>Comparar com aporte fixo:</strong> mantém o valor inicial, o prazo, a taxa de rendimento e a inflação; só retira os reajustes do aporte. A diferença de patrimônio é separada entre dinheiro adicional depositado e efeito dos rendimentos. Não confunda aumento de aporte com aumento da rentabilidade. A simulação não pressupõe que seu salário realmente aumentará nem avalia se os aportes futuros caberão no orçamento.</p>
+<p><strong>Inflação e poder de compra:</strong> o saldo nominal é o valor na conta em cada data. Para expressá-lo em dinheiro de hoje, dividimos pelo fator de inflação acumulada. A inflação anual é efetiva, composta ao longo do tempo. O aporte é reajustado de acordo com a configuração de aumento anual, independentemente da inflação.</p>
+<div class="formula">fator_inflação(t) = (1 + inflação_anual)^(t/12), com t em meses<br>saldo_em_reais_de_hoje(t) = saldo_nominal(t) / fator_inflação(t)<br>diferença_pela_inflação(t) = saldo_nominal(t) − saldo_em_reais_de_hoje(t)<br>redução_do_poder_de_compra_por_real = 1 − 1 / fator_inflação(t)<br>inflação_acumulada = fator_inflação(t) − 1<br>rendimento_real_anual = (1 + rendimento_nominal_anual) / (1 + inflação_anual) − 1</div>
+<p><strong>Como interpretar a corrosão:</strong> a diferença exibida é uma comparação entre o número em moeda futura e seu equivalente em moeda de hoje; não é dinheiro descontado da conta, imposto ou prejuízo nominal. Por exemplo, preços 100% maiores significam poder de compra 50% menor por real, não 100% menor. A taxa real não é calculada apenas subtraindo inflação de rendimento. Ela pode ser negativa mesmo com juros nominais positivos. Os aportes podem fazer o patrimônio crescer mesmo nesse cenário.</p>
+<p><strong>Não confunda correção com lucro:</strong> não subtraímos o total de aportes nominais do saldo em reais de hoje para calcular “lucro real”, pois seriam valores em bases diferentes. O gráfico de aportes e rendimentos mantém os dois valores nominais; o gráfico de inflação compara o mesmo saldo nas duas bases.</p>
+<p><strong>Adiar:</strong> mantém o mesmo valor inicial, a mesma data final e o aporte previsto para cada ano do calendário original. Ao adiar, eliminamos apenas os depósitos e os rendimentos dos meses de espera. O dinheiro inicial fica parado até começar e os depósitos não feitos não são repostos depois. Exemplo: com R$ 1.000 por mês e reajuste de 10%, quem começa após um ano passa a aportar R$ 1.100 por mês, não R$ 1.000. A diferença inclui aportes não realizados e rendimentos, não apenas juros.</p>
+<p><strong>Meta:</strong> em “Valor na conta no futuro”, a meta é nominal e não aumenta com a inflação. Em “Poder de compra de hoje”, a meta nominal de cada mês equivale ao valor informado multiplicado pelo fator de inflação daquele mês. O aporte mensal <strong>inicial</strong> necessário é calculado para atingir a meta no fim do prazo, aplicando depois o mesmo reajuste anual escolhido. Com reajuste percentual, recalculamos toda a série proporcionalmente. Com reajuste em reais, mantemos os acréscimos anuais fixos e resolvemos apenas o valor do primeiro ano. A resposta é arredondada para cima em centavos. Um resultado de R$ 0 no primeiro ano não elimina os aumentos futuros em reais, quando houver. A primeira vez em que a meta é alcançada é procurada apenas dentro do prazo e não garante que ela se mantenha atingida até o final em cenários de perdas. A meta não estima uma renda de aposentadoria.</p>
+<p><strong>Limitações:</strong> a simulação usa taxa e inflação constantes e não modela risco, oscilações de mercado, saques, interrupções, impostos ou custos. Os valores de 8% de rendimento anual, 4% de inflação e 10% de aumento do aporte são hipóteses didáticas, não taxas atuais, previsões ou recomendações. Os resultados reais podem ser diferentes. Não há garantia de retorno.</p>
+<p><strong>Referências de metodologia:</strong> <a href="https://www3.bcb.gov.br/CALCIDADAO/publico/exibirMetodologiaAplicacaoDepositosRegulares.do?method=exibirMetodologiaAplicacaoDepositosRegulares" target="_blank" rel="noopener noreferrer">Banco Central — aplicação com depósitos regulares</a> e <a href="https://www.investor.gov/financial-tools-calculators/calculators/compound-interest-calculator" target="_blank" rel="noopener noreferrer">Investor.gov / SEC — calculadora de juros compostos</a>. Veja também <a href="https://www.bcb.gov.br/controleinflacao/oqueinflacao" target="_blank" rel="noopener noreferrer">Banco Central — inflação e poder de compra</a>. As fontes explicam os conceitos; os valores de exemplo não são retirados delas.</p>
+</details>
+<footer class="footer"><span>Ferramenta educativa. Não é recomendação de investimento.</span><span>Funciona offline • Nenhum dado é enviado • Não salva os valores após fechar</span></footer>
+<noscript><p class="error">Ative o JavaScript no navegador para alterar a simulação. Os números exibidos inicialmente são apenas o exemplo padrão.</p></noscript>
+</div>
+<script>
+
+'use strict';
+const $ = id => document.getElementById(id);
+const currency = new Intl.NumberFormat('pt-BR', {style:'currency',currency:'BRL'});
+const decimals = new Intl.NumberFormat('pt-BR', {minimumFractionDigits:2,maximumFractionDigits:2});
+const pct = new Intl.NumberFormat('pt-BR', {maximumFractionDigits:2});
+const defaults = {initial:0,monthly:1000,growthMode:'percent',growthRate:10,growthAmount:100,rate:8,rateUnit:'annual',years:20,inflation:4,goal:1000000,goalMode:'nominal',timing:'end',delay:5};
+let latest = null;
+let previousUnit = 'annual';
+let chartMode = 'inflation';
+function money(v) { return currency.format(Math.abs(v)<0.005 ? 0 : v); }
+function percent(v) { return pct.format(Math.abs(v)<0.000000001 ? 0 : v*100)+'%'; }
+function parseMoney(value) {
+  let s=String(value).trim().replace(/R\$/gi,'').replace(/\s/g,'');
+  if(!s) return NaN;
+  if(s.includes(',')) s=s.replace(/\./g,'').replace(',','.');
+  else if(/^[-+]?\d{1,3}(\.\d{3})+$/.test(s)) s=s.replace(/\./g,'');
+  if(!/^[-+]?(\d+(\.\d*)?|\.\d+)$/.test(s)) return NaN;
+  return Number(s);
+}
+function equivalentMonthly(rate,unit) { return unit==='annual'?Math.expm1(Math.log1p(rate)/12):rate; }
+function factor(rate,n,timing) {
+  const ordinary=Math.abs(rate)<1e-14?n:Math.expm1(n*Math.log1p(rate))/rate;
+  return ordinary*(timing==='begin'?1+rate:1);
+}
+function futureValue(initial,monthly,rate,n,timing) {
+  return initial*Math.exp(n*Math.log1p(rate))+monthly*factor(rate,n,timing);
+}
+// These measures compare the same balance in future and present-day currency.
+// Erosion is not a cash debit, nor is it nominal investment profit/loss.
+function inflationMeasures(balance,annualInflation,month) {
+  const logFactor=Math.log1p(annualInflation)*month/12;
+  const inflationFactor=Math.exp(logFactor);
+  const real=balance/inflationFactor;
+  return {real,inflationFactor,erosion:balance-real,erosionShare:-Math.expm1(-logFactor),inflationAccum:Math.expm1(logFactor)};
+}
+// Every monthly deposit is linear in the first-year monthly contribution.
+// Rates supplied to this pure API are fractions (0.10 means 10%).
+function contributionParts(p,month) {
+  const completedYears=Math.max(0,Math.floor((month-1)/12));
+  return p.growthMode==='fixed'
+    ? {multiplier:1,extra:(p.growthAmount||0)*completedYears}
+    : {multiplier:Math.pow(1+(p.growthRate||0),completedYears),extra:0};
+}
+function contributionAt(p,month,firstYearMonthly=p.monthly) {
+  const part=contributionParts(p,month);
+  return firstYearMonthly*part.multiplier+part.extra;
+}
+function growBalance(balance,deposit,r,timing) {
+  return timing==='begin' ? (balance+deposit)*(1+r) : balance*(1+r)+deposit;
+}
+function project(p,r,n,waitMonths=0) {
+  let balance=p.initial,invested=p.initial;
+  const rows=[{month:0,year:0,start:p.initial,deposit:0,monthInterest:0,balance,invested,interest:0,...inflationMeasures(balance,p.inflation,0)}];
+  for(let month=1;month<=n;month++) {
+    const start=balance,active=month>waitMonths;
+    const deposit=active?contributionAt(p,month):0;
+    const monthInterest=active?(balance+(p.timing==='begin'?deposit:0))*r:0;
+    if(active) balance=growBalance(balance,deposit,r,p.timing);
+    invested+=deposit;
+    rows.push({month,year:Math.ceil(month/12),start,deposit,monthInterest,balance,invested,interest:balance-invested,...inflationMeasures(balance,p.inflation,month)});
+  }
+  return {rows,last:rows[n]};
+}
+function goalContributionTerms(p,r,n) {
+  let unit=0,extra=0;
+  for(let month=1;month<=n;month++) {
+    const part=contributionParts(p,month);
+    unit=growBalance(unit,part.multiplier,r,p.timing);
+    extra=growBalance(extra,part.extra,r,p.timing);
+  }
+  return {unit,extra};
+}
+function simulate(params) {
+  const p={growthMode:'percent',growthRate:0,growthAmount:0,...params,goalMode:params.goalMode||'nominal'};
+  const r=equivalentMonthly(p.rate,p.rateUnit), n=p.years*12;
+  const annualReturn=Math.expm1(12*Math.log1p(r));
+  const realAnnualReturn=Math.expm1(12*Math.log1p(r)-Math.log1p(p.inflation));
+  const {rows,last}=project(p,r,n);
+  const baseline=project({...p,growthMode:'percent',growthRate:0,growthAmount:0},r,n);
+  rows.forEach((row,index)=>{row.fixedBalance=baseline.rows[index].balance;});
+  const waitMonths=p.delay*12;
+  // Waiting removes deposits before the start, but does not reset the salary-growth calendar.
+  const delayedProjection=project(p,r,n,waitMonths);
+  const delayed=delayedProjection.last.balance;
+  const missedDeposits=rows.slice(1,waitMonths+1).reduce((sum,row)=>sum+row.deposit,0);
+  const goalFuture=p.goal*(p.goalMode==='real'?last.inflationFactor:1);
+  const goalToday=goalFuture/last.inflationFactor;
+  const terms=goalContributionTerms(p,r,n);
+  const initialFuture=p.initial*Math.exp(n*Math.log1p(r));
+  const requiredRaw=Math.max(0,(goalFuture-initialFuture-terms.extra)/terms.unit);
+  const required=Math.ceil(requiredRaw*100)/100;
+  const requiredLast=contributionAt(p,n,required);
+  const hit=rows.findIndex(row=>row.balance>=p.goal*(p.goalMode==='real'?row.inflationFactor:1)-1e-8);
+  const extraDeposits=last.invested-baseline.last.invested;
+  const extraInterest=last.interest-baseline.last.interest;
+  const growthDifference=last.balance-baseline.last.balance;
+  if(![last.balance,last.real,delayed,required,goalFuture,growthDifference].every(Number.isFinite)) {
+    throw new Error('Os valores excederam o limite de cálculo. Reduza o prazo ou as taxas.');
+  }
+  return {p,r,n,annualReturn,realAnnualReturn,rows,last,baseline,delayed,delayedProjection,missedDeposits,required,requiredLast,requiredRaw,hit,goalFuture,goalToday,extraDeposits,extraInterest,growthDifference};
+}
+function readInputs() {
+  const growthMode=$('growthMode').value;
+  const p={initial:parseMoney($('initial').value),monthly:parseMoney($('monthly').value),growthMode,growthRate:growthMode==='percent'?Number($('growthRate').value)/100:0,growthAmount:growthMode==='fixed'?parseMoney($('growthAmount').value):0,rate:Number($('rate').value)/100,rateUnit:$('rateUnit').value,years:Number($('years').value),inflation:Number($('inflation').value)/100,goal:parseMoney($('goal').value),goalMode:$('goalMode').value,timing:$('timing').value,delay:Number($('delay').value)};
+  for(const k of ['rate','years','inflation','delay',growthMode==='percent'?'growthRate':'growthAmount']) if($(k).value.trim()==='') throw new Error('Preencha todos os campos para simular.');
+  if(Object.values(p).some(v=>typeof v==='number'&&!Number.isFinite(v))) throw new Error('Confira os valores: use apenas números. Exemplo de valor: 1.000,00.');
+  if(!['percent','fixed'].includes(p.growthMode)) throw new Error('Escolha um tipo de aumento do aporte.');
+  if(p.initial<0||p.monthly<0||p.initial>1e9||p.monthly>1e9) throw new Error('Valor inicial e aporte inicial devem ficar entre R$ 0 e R$ 1 bilhão.');
+  if(p.growthRate<0||p.growthRate>1) throw new Error('O aumento percentual do aporte deve ficar entre 0% e 100% ao ano.');
+  if(p.growthAmount<0||p.growthAmount>1e9) throw new Error('O aumento anual em reais deve ficar entre R$ 0 e R$ 1 bilhão.');
+  if(p.goal<=0||p.goal>1e12) throw new Error('A meta deve ser maior que zero e de até R$ 1 trilhão.');
+  if(!Number.isInteger(p.years)||p.years<1||p.years>50) throw new Error('Escolha um prazo de 1 a 50 anos inteiros.');
+  if(p.rate<=-1||p.rate>1) throw new Error('Informe uma taxa maior que −100% e de até 100% no período escolhido.');
+  if(p.inflation<0||p.inflation>1) throw new Error('A inflação deve estar entre 0% e 100% ao ano.');
+  if(!Number.isInteger(p.delay)||p.delay<0||p.delay>p.years) throw new Error('A espera deve ser de zero até o prazo total, em anos inteiros.');
+  return p;
+}
+function syncGrowthControls() {
+  const fixed=$('growthMode').value==='fixed';
+  $('growth-percent-fields').hidden=fixed;
+  $('growth-fixed-fields').hidden=!fixed;
+  $('growthRate').disabled=fixed;
+  $('growthAmount').disabled=!fixed;
+}
+function growthDescription(p) {
+  if((p.growthMode==='fixed'?p.growthAmount:p.growthRate)===0) return 'Sem reajuste';
+  return p.growthMode==='fixed'?`+ ${money(p.growthAmount)} a cada ano`:`+ ${percent(p.growthRate)} ao ano`;
+}
+function renderGrowth(data) {
+  const p=data.p;
+  $('growth-badge').textContent=growthDescription(p);
+  const years=[...new Set([1,2,3,p.years])].filter(year=>year<=p.years);
+  $('growth-milestones').style.setProperty('--milestone-count',String(years.length));
+  $('growth-milestones').innerHTML=years.map(year=>`<div class="milestone"><span>Ano ${year}</span><strong>${money(contributionAt(p,(year-1)*12+1))}</strong><small>por mês · meses ${(year-1)*12+1}–${year*12}</small></div>`).join('');
+  $('growth-preview').textContent=p.years===1?'Prazo de 1 ano: o reajuste só teria efeito a partir do 13º mês.':`Ano 1: ${money(p.monthly)}/mês → ano 2: ${money(contributionAt(p,13))}/mês.`;
+  $('growth-inflation-note').textContent=p.growthMode==='fixed'?'O aumento é no valor mensal, não um depósito extra anual. A inflação não é somada automaticamente.':'Reajuste nominal: a inflação não é somada automaticamente. Não altera a taxa de rendimento.';
+  document.querySelectorAll('[data-growth]').forEach(b=>b.setAttribute('aria-pressed',String(p.growthMode==='percent'&&Math.abs(Number(b.dataset.growth)/100-p.growthRate)<1e-10)));
+  document.querySelectorAll('[data-growth-amount]').forEach(b=>b.setAttribute('aria-pressed',String(p.growthMode==='fixed'&&Math.abs(Number(b.dataset.growthAmount)-p.growthAmount)<1e-10)));
+  $('fixed-balance').textContent=money(data.baseline.last.balance);
+  $('growing-balance').textContent=money(data.last.balance);
+  $('growth-gain').textContent=Math.abs(data.growthDifference)<0.005?'Os dois cenários terminam com o mesmo saldo.':`${money(data.growthDifference)} a mais no saldo final.`;
+  $('growth-breakdown').textContent=`Diferença: ${money(data.extraDeposits)} em depósitos adicionais e ${money(data.extraInterest)} pelo efeito dos rendimentos.`;
+  $('growth-real').textContent=`O aumento de saldo equivale a ${money(data.growthDifference/data.last.inflationFactor)} em dinheiro de hoje. Mesmo prazo e rendimento; muda apenas o aporte.`;
+}
+function compact(v) {
+  const av=Math.abs(v);
+  if(av>=1e12) return pct.format(v/1e12)+' tri';
+  if(av>=1e9) return pct.format(v/1e9)+' bi';
+  if(av>=1e6) return pct.format(v/1e6)+' mi';
+  if(av>=1e3) return pct.format(v/1e3)+' mil';
+  return pct.format(v);
+}
+function axis(v) { return 'R$ '+compact(v); }
+function drawChart(data) {
+  const inflation=chartMode==='inflation', growth=chartMode==='growth';
+  const secondary=inflation?'real':growth?'fixedBalance':'invested';
+  const W=760,H=300,left=90,right=26,top=24,bottom=44;
+  const pw=W-left-right,ph=H-top-bottom;
+  const annual=data.rows.filter(row=>row.month%12===0);
+  const max=Math.max(...annual.map(row=>Math.max(row.balance,row[secondary])),1)*1.12;
+  const x=month=>left+(month/data.n)*pw;
+  const y=value=>top+ph-(value/max)*ph;
+  const path=key=>annual.map((row,i)=>(i===0?'M':'L')+x(row.month).toFixed(2)+','+y(row[key]).toFixed(2)).join(' ');
+  let grid='';
+  for(let i=0;i<=4;i++) {
+    const val=max*i/4,yy=y(val);
+    grid+=`<line x1="${left}" y1="${yy}" x2="${W-right}" y2="${yy}" stroke="#e5ecec"/><text x="${left-13}" y="${yy+4}" text-anchor="end" fill="#61717d" font-size="11">${axis(val)}</text>`;
+  }
+  const ticks=Math.min(5,data.p.years);
+  for(let i=0;i<=ticks;i++) {
+    const yr=data.p.years*i/ticks,xx=x(yr*12);
+    grid+=`<text x="${xx}" y="${H-17}" text-anchor="middle" fill="#61717d" font-size="11">${pct.format(yr)} ${yr===1?'ano':'anos'}</text>`;
+  }
+  const line=path('balance');
+  const area=(inflation||growth)
+    ? line+' '+[...annual].reverse().map(row=>'L'+x(row.month).toFixed(2)+','+y(row[secondary]).toFixed(2)).join(' ')+' Z'
+    : line+` L${x(data.n)},${top+ph} L${left},${top+ph} Z`;
+  const secondaryColor=inflation?'#b57930':'#476be2';
+  const title=inflation?`Saldo nominal e poder de compra ao longo de ${data.p.years} anos`:growth?`Saldo com e sem aumento anual do aporte ao longo de ${data.p.years} anos`:`Saldo nominal e total depositado ao longo de ${data.p.years} anos`;
+  const desc=inflation
+    ?`Ao final, saldo nominal de ${money(data.last.balance)}, equivalente a ${money(data.last.real)} em dinheiro de hoje. Diferença na conversão: ${money(data.last.erosion)}. Não é uma retirada da conta.`
+    :growth?`Com o reajuste escolhido, saldo de ${money(data.last.balance)}; mantendo o aporte inicial, saldo de ${money(data.baseline.last.balance)}. Ambos nominais. A diferença inclui dinheiro adicional depositado e rendimentos.`
+    :`Ao final, saldo de ${money(data.last.balance)}, com ${money(data.last.invested)} depositados, em valores nominais.`;
+  $('chart-inflation').setAttribute('aria-pressed',String(inflation));
+  $('chart-contributions').setAttribute('aria-pressed',String(chartMode==='contributions'));
+  $('chart-growth').setAttribute('aria-pressed',String(growth));
+  $('chart-legend').innerHTML=inflation
+    ?'<span><i></i>Saldo nominal</span><span><i class="real"></i>Poder de compra em reais de hoje</span>'
+    :growth?'<span><i></i>Com o reajuste escolhido</span><span><i class="baseline"></i>Mantendo o aporte inicial</span>'
+    :'<span><i></i>Saldo com rendimentos</span><span><i class="invested"></i>Dinheiro depositado</span>';
+  $('chart-caption').textContent=inflation
+    ?'As duas linhas mostram o mesmo patrimônio: o valor na conta e seu equivalente em dinheiro de hoje. A área entre elas evidencia a corrosão do poder de compra, não um débito no investimento.'
+    :growth?'Os dois cenários usam o mesmo prazo, valor inicial e rendimento. A diferença inclui depósitos adicionais e seus rendimentos. Valores nominais; não é toda composta por juros.'
+    :'Ambas as linhas estão em valores nominais. A diferença entre elas representa os rendimentos acumulados. O total depositado já inclui os reajustes anuais do aporte.';
+  $('chart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-labelledby="chart-title chart-desc"><title id="chart-title">${title}</title><desc id="chart-desc">${desc} Os valores detalhados estão na tabela anual.</desc><defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="${inflation?'#d29853':'#087d65'}" stop-opacity=".18"/><stop offset="100%" stop-color="${inflation?'#d29853':'#087d65'}" stop-opacity=".035"/></linearGradient></defs>${grid}<path d="${area}" fill="url(#area)"/><path d="${line}" fill="none" stroke="#087d65" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="${path(secondary)}" fill="none" stroke="${secondaryColor}" stroke-width="2.5" stroke-dasharray="7 5"/><circle cx="${x(data.n)}" cy="${y(data.last.balance)}" r="4.5" fill="#087d65" stroke="white" stroke-width="2"/><circle cx="${x(data.n)}" cy="${y(data.last[secondary])}" r="4" fill="${secondaryColor}" stroke="white" stroke-width="2"/></svg>`;
+}
+function duration(months) {
+  const years=Math.floor(months/12),m=months%12;
+  return [years?years+' '+(years===1?'ano':'anos'):'',m?m+' '+(m===1?'mês':'meses'):''].filter(Boolean).join(' e ')||'no início';
+}
+function update() {
+  syncGrowthControls();
+  try {
+    const p=readInputs(),data=simulate(p);
+    const {last,r,delayed,required,hit,realAnnualReturn}=data;
+    latest=data;
+    $('error').hidden=true;
+    $('results').style.opacity='1';
+    $('csv').disabled=false;
+    $('rate-equivalent').textContent=p.rateUnit==='annual'?`Equivale a ${new Intl.NumberFormat('pt-BR',{maximumFractionDigits:4}).format(r*100)}% ao mês. Taxa efetiva nominal.`:`Equivale a ${percent(data.annualReturn)} ao ano. Taxa efetiva nominal.`;
+    $('context').textContent=`Ao final de ${p.years} ${p.years===1?'ano':'anos'}, seu saldo estimado seria`;
+    $('balance').textContent=money(last.balance);
+    $('invested').textContent=money(last.invested);
+    $('interest').textContent=money(last.interest);
+    renderGrowth(data);
+    $('real-balance').textContent=money(last.real);
+    $('inflation-caption').textContent=`Hipótese: ${percent(p.inflation)} ao ano`;
+    $('erosion-amount').textContent=money(last.erosion);
+    $('erosion-caption').textContent=p.inflation===0?'Sem corrosão nesta hipótese.':`${percent(last.erosionShare)} de redução do poder de compra por real.`;
+    $('power-retained').style.width=(100/last.inflationFactor)+'%';
+    $('power-eroded').style.width=(100*last.erosionShare)+'%';
+    $('power-caption').textContent=`Cada R$ 100 no fim do prazo teriam o poder de compra de ${money(100/last.inflationFactor)} de hoje.`;
+    $('cumulative-inflation').textContent=percent(last.inflationAccum);
+    $('real-rate').textContent=percent(realAnnualReturn);
+    $('real-rate').classList.toggle('negative',realAnnualReturn < -1e-10);
+    $('inflation-example').textContent=`Algo que custa R$ 100 hoje custaria ${money(100*last.inflationFactor)} ao final do prazo, seguindo esta inflação.`;
+    $('return-verdict').textContent=realAnnualReturn>1e-10
+      ?'Nesta hipótese, o rendimento supera a inflação, antes de impostos e taxas.'
+      :realAnnualReturn < -1e-10
+        ?'Nesta hipótese, o rendimento não acompanha a inflação. Novos aportes ainda podem aumentar seu patrimônio.'
+        :'Nesta hipótese, o rendimento apenas acompanha a inflação, antes de impostos e taxas.';
+    $('return-verdict').classList.toggle('negative',realAnnualReturn < -1e-10);
+    document.querySelectorAll('[data-inflation]').forEach(b=>b.setAttribute('aria-pressed',String(Math.abs(Number(b.dataset.inflation)/100-p.inflation)<1e-10)));
+    const earnedShare=last.balance>0&&last.interest>0?last.interest/last.balance*100:0;
+    $('principal-bar').style.width=(100-earnedShare)+'%';
+    $('interest-bar').style.width=earnedShare+'%';
+    $('composition-note').textContent=last.interest>=0?`${pct.format(earnedShare)}% do saldo final viria dos rendimentos nominais.`:'Nesta hipótese, o saldo final é menor que o total depositado.';
+    $('delay-title').textContent=p.delay===0?'Comparando o mesmo ponto de partida':`E se começar daqui a ${p.delay} ${p.delay===1?'ano':'anos'}?`;
+    $('now-balance').textContent=money(last.balance);
+    $('later-balance').textContent=money(delayed);
+    const rawDifference=last.balance-delayed;
+    const difference=Math.abs(rawDifference)<0.005?0:rawDifference;
+    $('delay-cost').textContent=money(Math.abs(difference));
+    $('delay-description').textContent=difference>=0?'a menos no saldo nominal final ao adiar.':'a mais no saldo nominal ao adiar, neste cenário de perdas.';
+    $('delay-breakdown').textContent=`Diferença: ${money(data.missedDeposits)} em depósitos não feitos e ${money(difference-data.missedDeposits)} em rendimentos.`;
+    $('delay-real').textContent=`Em dinheiro de hoje, a diferença equivale a ${money(Math.abs(difference)/last.inflationFactor)} ${difference>=0?'a menos':'a mais'} ao adiar.`;
+    $('goal-hint').textContent=p.goalMode==='real'?'A meta cresce com a inflação para preservar o poder de compra informado.':'Meta nominal: valor na conta na data futura, sem reajuste pela inflação.';
+    $('goal-title').textContent=`Sua meta: ${money(p.goal)}`;
+    $('goal-timeline').textContent=hit===0?'Você já começa alcançando essa meta.':hit<0?'Com este plano de aportes, a meta não é alcançada dentro do prazo.':`Com este plano de aportes, a meta é alcançada pela primeira vez em ${duration(hit)}${p.goalMode==='real'?', já considerando a inflação':''}.`;
+    const progress=last.balance/data.goalFuture*100;
+    $('goal-progress').style.width=Math.max(0,Math.min(100,progress))+'%';
+    $('goal-percent').textContent=`O saldo final equivale a ${pct.format(progress)}% da meta${p.goalMode==='real'?' corrigida pela inflação':''}.`;
+    $('required-monthly').textContent=money(required)+'/mês';
+    $('required-description').textContent=`Aporte mensal no primeiro ano para chegar ${p.goalMode==='real'?'ao poder de compra desejado':'à meta nominal'} em ${p.years} ${p.years===1?'ano':'anos'}, com o reajuste escolhido.`;
+    $('goal-note').textContent=required===0?'O aporte mensal necessário no primeiro ano é zero nesta hipótese. Isso não elimina os reajustes futuros em reais, quando houver.':required<=p.monthly?'Seu aporte inicial, com os reajustes escolhidos, é suficiente para atingir a meta no final desta simulação.':`No primeiro ano, isso representa ${money(required-p.monthly)} a mais por mês do que seu aporte inicial.`;
+    $('goal-contribution-explanation').textContent=p.years===1?'Este é o aporte mensal total necessário, não um valor extra. Não há reajuste dentro de um prazo de apenas 12 meses.':`Este é o aporte mensal inicial total, não um valor extra. Depois: ${growthDescription(p).toLowerCase()}. Com esse aporte inicial calculado, no ano ${p.years} seriam ${money(data.requiredLast)} por mês.`;
+    $('goal-basis-explanation').textContent=p.goalMode==='real'
+      ?`Para ter o poder de compra de ${money(p.goal)} de hoje, a meta de saldo no fim do prazo seria ${money(data.goalFuture)}.`
+      :`Essa meta nominal teria o poder de compra de ${money(data.goalToday)} de hoje. Em “Meta e outros ajustes”, selecione “Poder de compra de hoje” para preservar o valor desejado.`;
+    $('year-rows').innerHTML=data.rows.filter(row=>row.month%12===0).map(row=>`<tr><td>${row.month===0?'Início':row.month/12}</td><td>${row.month===0?'—':money(row.deposit)}</td><td>${money(row.invested)}</td><td>${money(row.interest)}</td><td>${money(row.balance)}</td><td>${money(row.real)}</td><td>${money(row.erosion)}</td></tr>`).join('');
+    drawChart(data);
+  } catch(err) {
+    $('error').textContent=err.message;
+    $('error').hidden=false;
+    $('results').style.opacity='.32';
+    $('csv').disabled=true;
+    latest=null;
+  }
+}
+function capDelay() {
+  const years=Number($('years').value);
+  if(Number.isInteger(years)&&years>=1&&years<=50) {
+    $('delay').max=String(years);
+    if(Number($('delay').value)>years) $('delay').value=String(years);
+  }
+}
+$('form').addEventListener('submit',e=>e.preventDefault());
+for(const id of ['initial','monthly','goal','growthAmount']) {
+  $(id).addEventListener('input',update);
+  $(id).addEventListener('blur',()=>{const val=parseMoney($(id).value);if(Number.isFinite(val))$(id).value=decimals.format(val);update();});
+}
+for(const id of ['rate','years','inflation','delay','growthRate']) $(id).addEventListener('input',()=>{if(id==='years')capDelay();update();});
+for(const id of ['timing','goalMode','growthMode']) $(id).addEventListener('change',update);
+$('rateUnit').addEventListener('change',()=>{
+  const newUnit=$('rateUnit').value,rate=Number($('rate').value)/100;
+  if(Number.isFinite(rate)&&rate>-1&&newUnit!==previousUnit) {
+    const converted=newUnit==='monthly'?Math.expm1(Math.log1p(rate)/12):Math.expm1(12*Math.log1p(rate));
+    $('rate').value=String(Number((converted*100).toFixed(8)));
+  }
+  previousUnit=newUnit;update();
+});
+document.querySelectorAll('[data-monthly]').forEach(b=>b.addEventListener('click',()=>{$('monthly').value=decimals.format(Number(b.dataset.monthly));update();}));
+document.querySelectorAll('[data-years]').forEach(b=>b.addEventListener('click',()=>{$('years').value=b.dataset.years;capDelay();update();}));
+document.querySelectorAll('[data-inflation]').forEach(b=>b.addEventListener('click',()=>{$('inflation').value=b.dataset.inflation;update();}));
+$('chart-inflation').addEventListener('click',()=>{chartMode='inflation';if(latest)drawChart(latest);});
+$('chart-contributions').addEventListener('click',()=>{chartMode='contributions';if(latest)drawChart(latest);});
+$('chart-growth').addEventListener('click',()=>{chartMode='growth';if(latest)drawChart(latest);});
+document.querySelectorAll('[data-growth]').forEach(b=>b.addEventListener('click',()=>{$('growthMode').value='percent';$('growthRate').value=b.dataset.growth;update();}));
+document.querySelectorAll('[data-growth-amount]').forEach(b=>b.addEventListener('click',()=>{$('growthMode').value='fixed';$('growthAmount').value=decimals.format(Number(b.dataset.growthAmount));update();}));
+$('reset').addEventListener('click',()=>{
+  for(const [id,value]of Object.entries(defaults)) $(id).value=['initial','monthly','goal','growthAmount'].includes(id)?decimals.format(value):String(value);
+  previousUnit='annual';chartMode='inflation';capDelay();update();
+});
+// CSV keeps nominal and inflation-adjusted amounts explicitly separate.
+function buildCSV(data) {
+  const p=data.p, decimal=v=>Number(v).toFixed(2).replace('.',',');
+  return [
+    ['SIMULAÇÃO DE JUROS COMPOSTOS, INFLAÇÃO E APORTES CRESCENTES — VALORES EM R$'],
+    ['Hipóteses: taxas constantes, reajuste anual do aporte a partir do mês 13, juros reinvestidos, sem impostos ou taxas'],
+    ['Diferença pela inflação: comparação entre saldo nominal e reais de hoje; não é débito na conta'],
+    ['Valor inicial',decimal(p.initial)],['Aporte mensal no primeiro ano',decimal(p.monthly)],
+    ['Tipo de aumento anual do aporte',p.growthMode==='fixed'?'Acréscimo em reais ao aporte mensal':'Percentual sobre o aporte anterior'],
+    ['Aumento anual (%)',p.growthMode==='percent'?decimal(p.growthRate*100):'Não se aplica'],['Acréscimo anual ao aporte mensal (R$)',p.growthMode==='fixed'?decimal(p.growthAmount):'Não se aplica'],
+    ['Primeiro reajuste','Mês 13; depois, a cada 12 meses. Inflação não é somada automaticamente.'],
+    ['Comparação de espera','Os aportes após a espera seguem o calendário original de reajustes.'],
+    ['Taxa informada (%)',(p.rate*100).toFixed(8).replace('.',',')],['Período da taxa',p.rateUnit==='annual'?'Anual efetiva':'Mensal efetiva'],
+    ['Prazo (anos)',p.years],['Inflação anual (%)',decimal(p.inflation*100)],['Depósito',p.timing==='begin'?'Início do mês':'Fim do mês'],
+    ['Rendimento real anual (%)',decimal(data.realAnnualReturn*100)],
+    ['Aporte inicial mensal necessário para a meta',decimal(data.required)],['Aporte mensal no último ano para a meta',decimal(data.requiredLast)],
+    ['Saldo final mantendo o aporte inicial',decimal(data.baseline.last.balance)],['Depósitos adicionais devido aos reajustes',decimal(data.extraDeposits)],['Efeito dos reajustes sobre os rendimentos',decimal(data.extraInterest)],
+    ['Base da meta',p.goalMode==='real'?'Poder de compra de hoje':'Valor nominal futuro'],['Meta informada',decimal(p.goal)],['Meta nominal ao final do prazo',decimal(data.goalFuture)],
+    [],['Mês','Ano','Saldo inicial nominal (R$)','Aporte nominal (R$)','Juros nominais do mês (R$)','Saldo final nominal (R$)','Total depositado nominal (R$)','Juros nominais acumulados (R$)','Saldo em reais de hoje (R$)','Diferença pela inflação (R$)','Redução de poder de compra por real (%)','Inflação acumulada (%)','Saldo mantendo o aporte inicial (R$)'],
+    ...data.rows.map(row=>[row.month,row.year,...[row.start,row.deposit,row.monthInterest,row.balance,row.invested,row.interest,row.real,row.erosion,row.erosionShare*100,row.inflationAccum*100,row.fixedBalance].map(decimal)])
+  ].map(row=>row.map(v=>'"'+String(v).replace(/"/g,'""')+'"').join(';')).join('\r\n');
+}
+$('csv').addEventListener('click',()=>{
+  if(!latest) return;
+  const blob=new Blob(['\uFEFF'+buildCSV(latest)],{type:'text/csv;charset=utf-8;'});
+  const url=URL.createObjectURL(blob),a=document.createElement('a');
+  a.href=url;a.download='evolucao_aportes_juros_e_inflacao.csv';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),3000);
+});
+window.compoundCalculator={simulate,futureValue,equivalentMonthly,parseMoney,factor,inflationMeasures,buildCSV,contributionAt,contributionParts,goalContributionTerms,project};
+update();
+
+</script>
+</body>
+</html>
