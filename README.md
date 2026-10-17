@@ -4,7 +4,7 @@ Calculadora de juros compostos com inflação e aportes crescentes, em portuguê
 
 ## Como usar
 
-Baixe o projeto e abra o arquivo [`index.html`](index.html) no navegador. Não é necessário instalar dependências, configurar um servidor ou ter conexão com a internet para fazer as simulações.
+Baixe o projeto completo e abra o arquivo [`index.html`](index.html) no navegador. Mantenha as pastas `css` e `js` junto dele, pois contêm os estilos e o código da calculadora. Não é necessário instalar dependências, configurar um servidor ou ter conexão com a internet para fazer as simulações.
 
 1. Informe o valor inicial, o aporte mensal e o aumento anual dos aportes.
 2. Ajuste o rendimento estimado, o prazo e a inflação.
@@ -23,7 +23,31 @@ Baixe o projeto e abra o arquivo [`index.html`](index.html) no navegador. Não �
 
 ## Estrutura
 
-O arquivo `index.html` reúne toda a página, os estilos e os cálculos. A calculadora funciona inteiramente no navegador, sem serviços externos ou bibliotecas adicionais.
+```text
+SeuFuturo/
+├── index.html          # Estrutura e conteúdo da página
+├── css/
+│   └── styles.css      # Estilos e adaptação a diferentes telas
+├── js/
+│   └── calculadora.js  # Cálculos, controles, gráficos e exportação CSV
+├── .editorconfig      # Padrão de indentação e formatação dos arquivos
+├── .prettierrc.json    # Configuração do formatador
+└── README.md
+```
+
+A calculadora funciona inteiramente no navegador, sem serviços externos ou bibliotecas adicionais. O JavaScript é carregado com `defer`, para executar depois que o HTML estiver disponível.
+
+## Organização e formatação
+
+O HTML, o CSS e o JavaScript estão em arquivos separados, com indentação de dois espaços. O arquivo `.editorconfig` mantém esse padrão nos editores compatíveis.
+
+Para reaplicar a formatação com o Prettier, se você tiver Node.js e npm instalados:
+
+```sh
+npx --yes prettier@3.6.2 --write index.html css/styles.css js/calculadora.js README.md
+```
+
+Essa ferramenta é opcional e serve apenas para formatar o código; não é necessária para usar a calculadora.
 
 ## Hipóteses da simulação
 
